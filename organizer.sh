@@ -15,7 +15,7 @@ for i in {1..2}; do
   sleep 1
   echo -n "."
 done
-
+# Find all the files in the downloads directory with the following suffixes and move all files to created directory for the pictures
 find "$downloads_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" -o -iname "*.png" -o -iname "*.gif" \) -exec mv {} "$pictures_dir" \;
 
 echo "Image files are organized."
@@ -24,6 +24,7 @@ for i in {1..2}; do
   sleep 1
   echo -n "."
 done
+# Find all the files in the downloads directory with the following suffixes and move all files to created directory for the videos
 
 find "$downloads_dir" -type f \( -iname "*.mp4" -o -iname "*.flv" -o -iname "*.avi" -o -iname "*.amv" -o -iname "*.m4v" \) -exec mv {} "$videos_dir" \;
 
@@ -33,6 +34,7 @@ for i in {1..2}; do
   sleep 1 
   echo -n "."
 done
+# Find all the files in the downloads directory with the following suffixes and move all files to created directory for the documents
 
 find "$downloads_dir" -type f \( -iname "*.pdf" -o -iname "*.csv" -o -iname "*.odt" -o -iname "*.doc" -o -iname "*.txt" -o -iname "*.tex" -o -iname "*.html" -o -iname "*.md" -o -iname "*.epub" -o -iname "*.docx" -o -iname "*.xlsx"  \) -exec mv {} "$docs_dir" \;
 
