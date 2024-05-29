@@ -16,7 +16,7 @@ for i in {1..2}; do
   echo -n "."
 done
 
-find "$downloads_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" -o -iname "*.png" -o -iname "*.gif" \) -exec mv {} "$pictures_dir" \;
+find "$downloads_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" -o -iname "*.png" -o -iname "*.gif" \) -exec mv {} "$pictures_dir" \ > dev/null;
 
 echo "Image files are organized."
 echo -n "Organizing video files."
@@ -25,7 +25,7 @@ for i in {1..2}; do
   echo -n "."
 done
 
-find "$downloads_dir" -type f \( -iname "*.mp4" -o -iname "*.flv" -o -iname "*.avi" -o -iname "*.amv" -o -iname "*.m4v" \) -exec mv {} "$videos_dir" \;
+find "$downloads_dir" -type f \( -iname "*.mp4" -o -iname "*.flv" -o -iname "*.avi" -o -iname "*.amv" -o -iname "*.m4v" \) -exec mv {} "$videos_dir" \ > dev/null;
 
 echo "Video files are organized."
 echo -n "Organizing documents."
@@ -34,7 +34,7 @@ for i in {1..2}; do
   echo -n "."
 done
 
-find "$downloads_dir" -type f \( -iname "*.pdf" -o -iname "*.csv" -o -iname "*.odt" -o -iname "*.doc" -o -iname "*.txt" -o -iname "*.tex" -o -iname "*.html" -o -iname "*.md" -o -iname "*.epub" -o -iname "*.docx" -o -iname "*.xlsx"  \) -exec mv {} "$docs_dir" \;
+find "$downloads_dir" -type f \( -iname "*.pdf" -o -iname "*.csv" -o -iname "*.odt" -o -iname "*.doc" -o -iname "*.txt" -o -iname "*.tex" -o -iname "*.html" -o -iname "*.md" -o -iname "*.epub" -o -iname "*.docx" -o -iname "*.xlsx"  \) -exec mv {} "$docs_dir" \ > dev/null;
 
 echo "Documents are organized."
 echo "Decluttering process is completed."
